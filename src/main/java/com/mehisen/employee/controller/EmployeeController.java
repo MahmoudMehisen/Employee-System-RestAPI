@@ -46,6 +46,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id){
         Employee employee = null;
         employee = employeeService.getEmployeeById(id);
+        System.out.println(employee.toString());
         return ResponseEntity.ok(employee);
     }
 
